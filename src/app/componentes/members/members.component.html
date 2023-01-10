@@ -1,0 +1,25 @@
+<div class="container">
+  <button mat-raised-button color="warn" class="btn" (click)="openDialog()">
+    Add Member
+  </button>
+  <table>
+    <tr class="header">
+      <td *ngFor="let headr of header">{{ headr }}</td>
+    </tr>
+    <tr *ngFor="let member of mesmbers; let o = odd" class="even">
+      <td>{{ member.id }}</td>
+      <td>{{ member.firstName }}</td>
+      <td>{{ member.lastName }}</td>
+      <td>{{ member.userName }}</td>
+      <td>
+        <span (click)="deleteMember(member.id)" class="material-icons delete">
+          delete_outline
+        </span>
+
+        <span (click)="onEdit(member)" class="material-icons eddit">
+          mode
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>

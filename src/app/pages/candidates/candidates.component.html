@@ -1,0 +1,21 @@
+<div class="container">
+  <button mat-raised-button color="warn" class="btn">Add Candidates</button>
+  <table>
+    <tr class="header">
+      <td *ngFor="let headr of header">{{ headr }}</td>
+    </tr>
+    <tr *ngFor="let candidate of candidates" class="even">
+      <td>{{ candidate.id }}</td>
+      <td>{{ candidate.firstName }}</td>
+      <td>{{ candidate.lastName }}</td>
+      <td>{{ candidate.userName }}</td>
+      <td>{{ candidate.Apllied_For }}</td>
+
+      <td>
+        <span class="material-icons delete"> delete_outline </span>
+
+        <span class="material-icons eddit"> mode </span>
+      </td>
+    </tr>
+  </table>
+</div>

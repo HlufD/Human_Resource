@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+  .sidebar {
+    width: 250px;
+    .actual-nav {
+      width: 100%;
+    }
+  }
+  .main {
+    width: 82%;
+  }
+}

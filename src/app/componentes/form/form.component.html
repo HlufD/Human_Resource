@@ -1,0 +1,86 @@
+<form action="" class="form">
+  <button mat-raised-button color="warn" class="close" (click)="closeOnly()">
+    <span class="material-icons"> close </span>
+  </button>
+  <div *ngIf="data.status === false">
+    <input
+      type="text"
+      placeholder="First Name"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="member.firstName"
+    />
+
+    <input
+      type="text"
+      placeholder="Last Name"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="member.lastName"
+    />
+    <input
+      type="text"
+      placeholder="username"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="member.userName"
+    />
+    <input
+      type="password"
+      placeholder="password"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="member.password"
+    />
+
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="onCloseDialog()"
+      class="btn"
+    >
+      Add Member
+    </button>
+  </div>
+  <!-- else if -->
+  <div *ngIf="data.status === true">
+    <input
+      type="text"
+      placeholder="First Name"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="editData.firstName"
+    />
+
+    <input
+      type="text"
+      placeholder="Last Name"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="editData.lastName"
+    />
+    <input
+      type="text"
+      placeholder="username"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="editData.userName"
+    />
+    <input
+      type="password"
+      placeholder="password"
+      class="input"
+      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="editData.password"
+    />
+
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="onSaveChanges()"
+      class="btn"
+    >
+      Save Changes
+    </button>
+  </div>
+</form>

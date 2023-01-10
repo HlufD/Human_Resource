@@ -1,0 +1,19 @@
+<div class="container">
+  <button mat-raised-button color="warn" class="btn">Add Department</button>
+  <table>
+    <tr class="header">
+      <td *ngFor="let headr of header">{{ headr }}</td>
+    </tr>
+    <tr *ngFor="let department of departments" class="even">
+      <td>{{ department.id }}</td>
+      <td>{{ department.name }}</td>
+      <td>{{ department.code }}</td>
+
+      <td>
+        <span class="material-icons delete"> delete_outline </span>
+
+        <span class="material-icons eddit"> mode </span>
+      </td>
+    </tr>
+  </table>
+</div>
