@@ -1,5 +1,5 @@
 <div class="container">
-  <button mat-raised-button color="warn" class="btn">Add Department</button>
+  <button class="btn" (click)="openDialog()">Add Department</button>
   <table>
     <tr class="header">
       <td *ngFor="let headr of header">{{ headr }}</td>
@@ -10,9 +10,16 @@
       <td>{{ department.code }}</td>
 
       <td>
-        <span class="material-icons delete"> delete_outline </span>
+        <span
+          class="material-icons delete"
+          (click)="deleteDepartment(department.id)"
+        >
+          delete_outline
+        </span>
 
-        <span class="material-icons eddit"> mode </span>
+        <span class="material-icons eddit" (click)="onEdit(department)">
+          mode
+        </span>
       </td>
     </tr>
   </table>

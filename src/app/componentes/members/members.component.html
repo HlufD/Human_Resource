@@ -1,7 +1,5 @@
 <div class="container">
-  <button mat-raised-button color="warn" class="btn" (click)="openDialog()">
-    Add Member
-  </button>
+  <button class="btn" (click)="openDialog()">Add Member</button>
   <table>
     <tr class="header">
       <td *ngFor="let headr of header">{{ headr }}</td>
@@ -11,6 +9,7 @@
       <td>{{ member.firstName }}</td>
       <td>{{ member.lastName }}</td>
       <td>{{ member.userName }}</td>
+      <td>{{ member.role }}</td>
       <td>
         <span (click)="deleteMember(member.id)" class="material-icons delete">
           delete_outline

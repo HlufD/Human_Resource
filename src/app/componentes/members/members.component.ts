@@ -20,10 +20,11 @@ export class MembersComponent implements OnInit {
     firstName: "",
     lastName: "",
     userName: "",
+    role: "",
     password: "",
   };
 
-  header = ["id", "First Name", "last Name", "username", "Actions"];
+  header = ["id", "First Name", "last Name", "Email", "Department", "Actions"];
   ngOnInit() {
     this.getMembers();
   }
@@ -39,7 +40,7 @@ export class MembersComponent implements OnInit {
         this.member.firstName !== "" &&
         this.member.lastName !== "" &&
         this.member.userName !== "" &&
-        this.member.password !== ""
+        this.member.role !== ""
       ) {
         this.addMember();
       }
@@ -57,7 +58,7 @@ export class MembersComponent implements OnInit {
         this.member.firstName !== "" &&
         this.member.lastName !== "" &&
         this.member.userName !== "" &&
-        this.member.password !== ""
+        this.member.role !== ""
       ) {
         this.edditMember(this.member.id);
       }
@@ -76,15 +77,18 @@ export class MembersComponent implements OnInit {
         firstName: "",
         lastName: "",
         userName: "",
+        role: "",
         password: "",
       };
       this.getMembers();
     });
   }
   deleteMember(id: string) {
-    this.service.deleteMember(id).subscribe((res: any) => {
-      this.getMembers();
-    });
+    let result = confirm("Dp you want to Delete this Employee");
+    if (result)
+      this.service.deleteMember(id).subscribe((res: any) => {
+        this.getMembers();
+      });
   }
 
   edditMember(id: string) {

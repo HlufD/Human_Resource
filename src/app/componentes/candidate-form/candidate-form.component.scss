@@ -1,7 +1,7 @@
 .form {
   width: 400px;
   span {
-    color: rgb(231, 24, 107);
+    color: rgb(244, 23, 82);
   }
   .input {
     display: block;
@@ -9,7 +9,7 @@
     margin-top: 0.8rem;
     padding: 0.5rem 0.8rem;
     font-size: 1rem;
-    border: 1px solid teal;
+    border: 1px solid rgb(105, 220, 105);
     outline: none;
   }
   .btn {
@@ -18,7 +18,7 @@
     font-size: 1rem;
     border: none;
     margin-top: 0.8rem;
-    color: white;
+    padding: 0.5rem 0.8rem;
     background-color: teal;
   }
   .close {

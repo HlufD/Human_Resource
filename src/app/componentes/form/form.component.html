@@ -1,5 +1,10 @@
 <form action="" class="form">
-  <button mat-raised-button color="warn" class="close" (click)="closeOnly()">
+  <button
+    mat-raised-button
+    color="secondary"
+    class="close"
+    (click)="closeOnly()"
+  >
     <span class="material-icons"> close </span>
   </button>
   <div *ngIf="data.status === false">
@@ -20,17 +25,17 @@
     />
     <input
       type="text"
-      placeholder="username"
+      placeholder="email"
       class="input"
       [ngModelOptions]="{ standalone: true }"
       [(ngModel)]="member.userName"
     />
     <input
-      type="password"
-      placeholder="password"
+      type="text"
+      placeholder="Role"
       class="input"
       [ngModelOptions]="{ standalone: true }"
-      [(ngModel)]="member.password"
+      [(ngModel)]="member.role"
     />
 
     <button
@@ -61,17 +66,17 @@
     />
     <input
       type="text"
-      placeholder="username"
+      placeholder="email"
       class="input"
       [ngModelOptions]="{ standalone: true }"
       [(ngModel)]="editData.userName"
     />
     <input
-      type="password"
-      placeholder="password"
+      type="text"
+      placeholder="Role"
       class="input"
       [ngModelOptions]="{ standalone: true }"
-      [(ngModel)]="editData.password"
+      [(ngModel)]="editData.role"
     />
 
     <button

@@ -1,0 +1,73 @@
+<form action="" class="form" *ngIf="status === false">
+  <button mat-raised-button color="secondary" class="close" (click)="onClose()">
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="First Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="candidate.firstName"
+  />
+
+  <input
+    class="input"
+    type="text"
+    placeholder="Last Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="candidate.lastName"
+  />
+
+  <input
+    class="input"
+    type="email"
+    placeholder="email"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="candidate.userName"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="Apllied For"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="candidate.Apllied_For"
+  />
+  <button class="btn" (click)="onCloseDialog()">Add Candidate</button>
+</form>
+
+<form action="" class="form" *ngIf="status === true">
+  <button mat-raised-button color="secondary" class="close" (click)="onClose()">
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="First Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.firstName"
+  />
+
+  <input
+    class="input"
+    type="text"
+    placeholder="Last Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.lastName"
+  />
+
+  <input
+    class="input"
+    type="email"
+    placeholder="email"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.userName"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="Apllied For"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.Apllied_For"
+  />
+  <button class="btn" (click)="onSave()">Update Candidate</button>
+</form>

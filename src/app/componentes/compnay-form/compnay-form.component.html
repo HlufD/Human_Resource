@@ -1,0 +1,41 @@
+<form action="" class="form" *ngIf="status === false">
+  <button mat-raised-button color="secondary" class="close" (click)="onClose()">
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="Company Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="company.name"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="No of Employee"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="company.No_of_Employee"
+  />
+  <button class="btn" (click)="onCloseDialog()">Add Company</button>
+</form>
+
+<form action="" class="form" *ngIf="status === true">
+  <button mat-raised-button color="secondary" class="close" (click)="onClose()">
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="Company Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.name"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="No of Employee"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.No_of_Employee"
+  />
+  <button class="btn" (click)="onSave()">Update Company</button>
+</form>

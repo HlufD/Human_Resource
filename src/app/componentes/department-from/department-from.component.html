@@ -1,0 +1,52 @@
+<form action="" class="form" *ngIf="status === false">
+  <button
+    mat-raised-button
+    color="secondary"
+    class="close"
+    (click)="closeOnly()"
+  >
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="Department Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="department.name"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="Department Code"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="department.code"
+  />
+  <button class="btn" (click)="onCloseDialog()">Add Department</button>
+</form>
+
+<form action="" class="form" *ngIf="status === true">
+  {{ status }}
+  <button
+    mat-raised-button
+    color="secondary"
+    class="close"
+    (click)="closeOnly()"
+  >
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    class="input"
+    type="text"
+    placeholder="Department Name"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.name"
+  />
+  <input
+    class="input"
+    type="text"
+    placeholder="Department Code"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="editableData.code"
+  />
+  <button class="btn" (click)="onSave()">Update Department</button>
+</form>

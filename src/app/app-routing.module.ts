@@ -9,7 +9,7 @@ import { SalaryComponent } from "./pages/salary/salary.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 
 const routes: Routes = [
-  { path: "", component: DashboardComponent },
+  { path: "", component: EmployeeComponent },
   {
     path: "employee",
     component: EmployeeComponent,

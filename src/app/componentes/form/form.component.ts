@@ -7,6 +7,7 @@ interface comminData {
   lastName: string;
   userName: string;
   password: string;
+  role: string;
   status?: boolean;
 }
 
@@ -16,7 +17,14 @@ interface comminData {
   styleUrls: ["./form.component.scss"],
 })
 export class FormComponent implements OnInit {
-  member = { id: "", firstName: "", lastName: "", userName: "", password: "" };
+  member = {
+    id: "",
+    firstName: "",
+    lastName: "",
+    userName: "",
+    role: "",
+    password: "",
+  };
   editData = this.data;
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: comminData,

@@ -1,0 +1,51 @@
+<form action="" class="form" *ngIf="status === false">
+  <button
+    mat-raised-button
+    color="secondary"
+    class="close"
+    (click)="ocCloseonly()"
+  >
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    type="text"
+    class="input"
+    placeholder="Job Title"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="salary.employeType"
+  />
+  <input
+    type="text"
+    class="input"
+    placeholder="Salary"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="salary.salary"
+  />
+  <button class="btn" (click)="onCloseDialog()">Add Salary</button>
+</form>
+
+<form action="" class="form" *ngIf="status === true">
+  <button
+    mat-raised-button
+    color="secondary"
+    class="close"
+    (click)="ocCloseonly()"
+  >
+    <span class="material-icons"> close </span>
+  </button>
+  <input
+    type="text"
+    class="input"
+    placeholder="Job Title"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="eiditableSalary.employeType"
+  />
+  <input
+    type="text"
+    class="input"
+    placeholder="Salary"
+    [ngModelOptions]="{ standalone: true }"
+    [(ngModel)]="eiditableSalary.salary"
+  />
+  <button class="btn" (click)="onSave()">Update Salary</button>
+</form>

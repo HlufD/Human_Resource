@@ -1,5 +1,5 @@
 <div class="container">
-  <button mat-raised-button color="warn" class="btn">Add Candidates</button>
+  <button class="btn" (click)="openDialog()">Add Candidates</button>
   <table>
     <tr class="header">
       <td *ngFor="let headr of header">{{ headr }}</td>
@@ -12,9 +12,16 @@
       <td>{{ candidate.Apllied_For }}</td>
 
       <td>
-        <span class="material-icons delete"> delete_outline </span>
+        <span
+          class="material-icons delete"
+          (click)="deleteCandidates(candidate.id)"
+        >
+          delete_outline
+        </span>
 
-        <span class="material-icons eddit"> mode </span>
+        <span class="material-icons eddit" (click)="onEdit(candidate)">
+          mode
+        </span>
       </td>
     </tr>
   </table>

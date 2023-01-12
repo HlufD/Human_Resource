@@ -1,7 +1,7 @@
 .form {
   width: 400px;
   span {
-    color: rgb(231, 24, 107);
+    color: rgb(244, 23, 82);
   }
   .input {
     display: block;
@@ -18,8 +18,8 @@
     font-size: 1rem;
     border: none;
     margin-top: 0.8rem;
-    color: white;
-    background-color: teal;
+    padding: 0.5rem 0.8rem;
+    background-color: rgb(28, 208, 205);
   }
   .close {
     margin-left: 80%;

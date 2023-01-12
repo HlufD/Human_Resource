@@ -37,11 +37,37 @@ export class HumanResourceService {
   getDepartments() {
     return this.http.get(this.departmenturl);
   }
+  getDepartment(id: string) {
+    return this.http.get(`${this.departmenturl}/${id}`);
+  }
+  addDepartment(data: object) {
+    return this.http.post(this.departmenturl, data);
+  }
+  editDepartMnet(id: string, newValue: object) {
+    return this.http.patch(`${this.departmenturl}/${id}`, newValue);
+  }
+  delteDepartment(id: string) {
+    return this.http.delete(`${this.departmenturl}/${id}`);
+  }
+
   /*---------------------------end of  Department service------------------------------------------ */
 
   /*---------------------------start of Slary service------------------------------------------ */
-  getSlary() {
+  getSlaries() {
     return this.http.get(this.slaryurl);
+  }
+  getSarly(id: string) {
+    return this.http.get(`${this.slaryurl}/${id}`);
+  }
+
+  addSlary(data: object) {
+    return this.http.post(this.slaryurl, data);
+  }
+  editSalary(id: string, newValue: object) {
+    return this.http.patch(`${this.slaryurl}/${id}`, newValue);
+  }
+  deleteSalary(id: string) {
+    return this.http.delete(`${this.slaryurl}/${id}`);
   }
   /*---------------------------end of Slary service------------------------------------------ */
 
@@ -49,11 +75,38 @@ export class HumanResourceService {
   getCompany() {
     return this.http.get(this.companyurl);
   }
+  getCompanyById(id: string) {
+    return this.http.get(`${this.companyurl}/${id}`);
+  }
+
+  addComapny(data: object) {
+    return this.http.post(this.companyurl, data);
+  }
+
+  editCompany(id: string, newValue: object) {
+    return this.http.patch(`${this.companyurl}/${id}`, newValue);
+  }
+  deleteCompany(id: string) {
+    return this.http.delete(`${this.companyurl}/${id}`);
+  }
   /*---------------------------end of Company service------------------------------------------ */
 
   /*---------------------------start of Candidates service------------------------------------------ */
   getCandidates() {
     return this.http.get(this.candidatesurl);
+  }
+  getCandidate(id: string) {
+    return this.http.get(`${this.candidatesurl}/${id}`);
+  }
+  addCandidate(data: object) {
+    return this.http.post(this.candidatesurl, data);
+  }
+
+  editCandidate(id: string, newValue: object) {
+    return this.http.patch(`${this.candidatesurl}/${id}`, newValue);
+  }
+  deleteCandidate(id: string) {
+    return this.http.delete(`${this.candidatesurl}/${id}`);
   }
   /*---------------------------end of Candidates service------------------------------------------ */
 }
